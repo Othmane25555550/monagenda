@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+
+
+<html>
+<head>
+
+
+    <title>Mon Agenda Électronique</title>
+</head>
+<body>
+    <h1>Mon Agenda Électronique</h1>
+    
+    <form method="POST">
+        <label for="date">Date de l'événement:</label>
+        <input type="date" id="date" name="date">
+        <label for="name">Nom de l'événement:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Ajouter un événement</button>
+    </form>
+    
+    <h2>Événements à venir</h2>
+    <ul>
+        {% for event in events %}
+        <li>{{ event[1] }} : {{ event[2] }} | <a href="/delete/{{ event[0] }}">Supprimer</a></li>
+        {% endfor %}
+    </ul>
+
+    
+
+ 
+</body>
+</html>
+
+
