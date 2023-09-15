@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-
-
-
-<html>
+<html lang="en">
 <head>
-
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mon Agenda Électronique</title>
 </head>
 <body>
     <h1>Mon Agenda Électronique</h1>
     
-    <form method="POST">
+    <form method="GET">
         <label for="date">Date de l'événement:</label>
         <input type="date" id="date" name="date">
         <label for="name">Nom de l'événement:</label>
@@ -20,13 +17,20 @@
     </form>
     
     <h2>Événements à venir</h2>
-    <ul>
-        {% for event in events %}
-        <li>{{ event[1] }} : {{ event[2] }} | <a href="/delete/{{ event[0] }}">Supprimer</a></li>
-        {% endfor %}
-    </ul>
-
+    <div class="event">
+        <span>Nom de l'événement 1 : Description de l'événement 1</span>
+        <a href="/delete/1">Supprimer</a>
+    </div>
+    <div class="event">
+        <span>Nom de l'événement 2 : Description de l'événement 2</span>
+        <a href="/delete/2">Supprimer</a>
+    </div>
     
+    
+</body>
+</html>
+
+ 
 
  
 </body>
